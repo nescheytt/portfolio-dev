@@ -1,17 +1,8 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import Head from 'next/head'
 
 const inter = Inter({ subsets: ['latin'] })
-
-const ContentSecurityPolicy = `
-  default-src 'self';
-  script-src 'self';
-  child-src example.com;
-  style-src 'self' example.com;
-  font-src 'self';
-`
 
 export const metadata: Metadata = {
   title: 'Nahuel Scheytt | Frontend Developer',
@@ -70,6 +61,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/'
   },
+  icons: {
+    shortcut: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
+    apple: { url: '/apple-touch-icon.png', type: 'image/png' },
+  }
 }
 
 export default function RootLayout({
