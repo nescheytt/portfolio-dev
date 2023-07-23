@@ -47,7 +47,7 @@ type Props = {
 
 const Skills = ({ setMouseHover }: Props) => {
   return (
-    <section className="w-full xl:h-screen flex flex-col justify-center gap-y-10 p-6 py-24 px-12 md:py-12 lg:px-24">
+    <section className="w-full md:h-screen flex flex-col justify-center gap-y-10 p-6 py-24 px-12 md:py-12 lg:px-24">
       <div className="w-max overflow-hidden">
         <m.h2
           initial={{ x: "-100%" }}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 100 100">
+  <style>
++     @media (prefers-color-scheme: dark) {
++       .ico { fill: #fff7ed }
++     }
++ </style>
+  <rect width="100" height="100" rx="20" fill="#1f2937"></rect>
+  <path className="ico" fill="#fff7ed" d="M62.58 22.73L72.41 22.73L72.41 77.27L63.62 77.27L37.92 40.12L37.47 40.12L37.47 77.27L27.59 77.27L27.59 22.73L36.43 22.73L62.10 59.91L62.58 59.91L62.58 22.73Z"></path>
+</svg>
