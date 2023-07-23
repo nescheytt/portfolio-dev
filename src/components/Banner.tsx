@@ -27,7 +27,7 @@ const Banner = () => {
             transition={{ delay: 1, duration: 1, type: "spring" }}
             className="w-full h-[240px] sm:h-full xl:w-[500px] sepia-25 overflow-hidden"
           >
-            <Image src={PictureProfile} alt="Fotito mia" className="-translate-y-1/4 sm:translate-y-0" />
+            <Image src={PictureProfile} alt="Fotito mia" className="-translate-y-1/4 sm:translate-y-0" priority />
           </m.div>
 
           <m.div animate={{ x: 0 }} initial={{ x: "100%" }} transition={{ delay: 1.25, duration: 1, type: "spring" }} className="flex justify-center">
