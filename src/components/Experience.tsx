@@ -4,7 +4,7 @@ type Props = {
   setMouseHover: (value: boolean) => void
 }
 
-const Projects = ({ setMouseHover }: Props) => {
+const Experience = ({ setMouseHover }: Props) => {
   return (
     <section className="w-full md:h-screen bg-gray-800 flex flex-col justify-center gap-y-20 md:gap-y-10 py-24 px-8 md:py-12 md:px-12 lg:px-24 rounded-b-xl">
       <div className="flex overflow-hidden lg:mb-20">
@@ -110,4 +110,4 @@ const Projects = ({ setMouseHover }: Props) => {
   )  
 }
 
-export default Projects
+export default Experience
