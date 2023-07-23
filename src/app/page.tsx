@@ -17,15 +17,15 @@ export default function Home() {
 
   return (
     <main>
-      <Cursor mouseHover={mouseHover} />
       <Header setMouseHover={setMouseHover} />
+      <Cursor mouseHover={mouseHover} />
+      <ButtonScrollTop />
       <Banner />
       <About setMouseHover={setMouseHover} />
       <Skills setMouseHover={setMouseHover} />
       <Projects setMouseHover={setMouseHover} />
       <Contact setMouseHover={setMouseHover} />
       <Footer setMouseHover={setMouseHover} />
-      <ButtonScrollTop />
     </main>
   )
 }

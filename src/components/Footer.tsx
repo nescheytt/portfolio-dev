@@ -13,7 +13,7 @@ const Footer = ({ setMouseHover }: Props) => {
           <a href="https://twitter.com/nahueesch" className="text-gray-800 hover:underline" target="_blank">Twitter</a>
         </li>
         <li onMouseOver={() => setMouseHover(true)} onMouseLeave={() => setMouseHover(false)}>
-          <a href="mailto:nahuel.scheytt@gmail.com" className="text-gray-800 hover:underline" target="_blank">Email</a>
+          <a href="mailto:nahuel.scheytt@gmail.com" className="text-gray-800 hover:underline">Email</a>
         </li>
       </ul>
 

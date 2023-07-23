@@ -4,7 +4,7 @@ type Props = {
 
 const Contact = ({ setMouseHover }: Props) => {
   return (
-    <section className="w-full lg:h-screen flex flex-col justify-between items-end py-24 px-8 md:pt-12 md:px-12 lg:px-24 md:pb-6">
+    <section className="w-full flex flex-col justify-between items-end py-24 px-8 md:pt-12 md:px-12 lg:px-24 md:pb-6">
       <div className="max-w-3xl flex flex-col gap-y-20">
         <div className="w-full">
           <p className="text-gray-800 text-base font-medium uppercase">Have a project in mind?</p>
