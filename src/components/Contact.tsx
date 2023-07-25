@@ -2,8 +2,10 @@
 
 import * as Yup from 'yup'
 import { Formik, Form, Field } from 'formik'
+import { ToastContainer, toast } from 'react-toastify'
+import "react-toastify/dist/ReactToastify.css"
 
-const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms))
 
 type FormValues = {
   name: string
@@ -46,8 +48,23 @@ const Contact = ({ setMouseHover }: Props) => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData)
     })
-    .then(response => response.json())
-    .catch(error => console.log(error))
+    .then(response => {
+      response.json()
+      if (response.status === 200) {
+        toast("Hey 👋 Message sent 🚀!", {
+          position: toast.POSITION.BOTTOM_RIGHT
+        })  
+      }
+
+      if (response.status === 500 || response.status === 400) {
+        toast.error("Hey try again 😅!", {
+          position: toast.POSITION.BOTTOM_RIGHT
+        })
+      }
+    })
+    .catch(error => {
+      console.log(error)
+    })
   }
 
   return (
@@ -148,6 +165,8 @@ const Contact = ({ setMouseHover }: Props) => {
                   </button>
                 </div>
               </div>
+
+              <ToastContainer toastClassName="bg-red-500" />
             </Form>
           )}
         </Formik>
