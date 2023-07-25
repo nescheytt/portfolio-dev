@@ -47,13 +47,13 @@ type Props = {
 
 const Skills = ({ setMouseHover }: Props) => {
   return (
-    <section className="w-full md:h-screen flex flex-col justify-center gap-y-10 p-6 py-24 px-12 md:py-12 lg:px-24">
-      <div className="w-max overflow-hidden">
+    <section className="w-full h-full md:h-screen flex flex-col justify-center gap-y-10 p-6 py-24 px-12 md:py-12 lg:px-24">
+      <div className="w-full overflow-hidden">
         <m.h2
           initial={{ x: "-100%" }}
           whileInView={{ x: 0 }}
           transition={{ delay: 0.50, duration: 0.75, type: "spring" }}
-          className="w-max text-gray-800 text-5xl md:text-6xl lg:text-7xl font-semibold"
+          className="flex text-gray-800 text-5xl md:text-6xl lg:text-7xl font-semibold"
           onMouseOver={() => setMouseHover(true)}
           onMouseLeave={() => setMouseHover(false)}
         >
