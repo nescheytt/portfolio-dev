@@ -19,11 +19,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Nahuel Scheytt | Frontend Developer',
     description: 'Nahuel Scheytt is a Frontend Developer yet capable to develop on backend.',
-    url: 'https://nahuelscheytt.com',
+    url: 'https://www.nahuelscheytt.com',
     siteName: 'Nahuel Scheytt | Frontend Developer',
     images: [
       {
-        url: '/src/img/home-preview.jpg',
+        url: 'opengraph-image.jpg',
         type: 'image/*',
         width: 800,
         height: 600
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     description: 'Nahuel Scheytt is a Frontend Developer yet capable to develop on backend.',
     creator: '@nahueesch',
     images: {
-      url: '/src/img/home-preview.jpg',
+      url: 'opengraph-image.jpg',
       alt: 'Nahuel Scheytt | Frontend Developer Logo',
     },
   },
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     },
   },
   generator: 'Next.js',
-  metadataBase: new URL('https://nahuelscheytt.com'),
+  metadataBase: new URL('https://www.nahuelscheytt.com'),
   alternates: {
     canonical: '/'
   },
