@@ -1,6 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import imageOg from '@/img/home-preview.jpg'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,7 +24,10 @@ export const metadata: Metadata = {
     siteName: 'Nahuel Scheytt | Frontend Developer',
     images: [
       {
-        url: '/img/home-preview.jpg',
+        url: `${imageOg}`,
+        type: 'image/jpg',
+        width: 800,
+        height: 600
       }
     ],
     locale: 'en_US',
@@ -35,8 +39,8 @@ export const metadata: Metadata = {
     description: 'Nahuel Scheytt is a Frontend Developer yet capable to develop on backend.',
     creator: '@nahueesch',
     images: {
-      url: '/img/home-preview.jpg',
-      alt: 'Nahuel Scheytt | Frontend Developer Logo',
+      url: `${imageOg}`,
+      alt: 'Nahuel Scheytt | Frontend Developer Logo'
     },
   },
   robots: {
