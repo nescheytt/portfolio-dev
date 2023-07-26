@@ -23,16 +23,8 @@ export const metadata: Metadata = {
     siteName: 'Nahuel Scheytt | Frontend Developer',
     images: [
       {
-        url: 'img/view-home-og.png',
-        width: 800,
-        height: 600,
-      },
-      {
-        url: 'img/view-home-og-alt.png',
-        width: 1800,
-        height: 1600,
-        alt: 'View site alt',
-      },
+        url: '/img/home-preview.jpg',
+      }
     ],
     locale: 'en_US',
     type: 'website',
@@ -43,7 +35,7 @@ export const metadata: Metadata = {
     description: 'Nahuel Scheytt is a Frontend Developer yet capable to develop on backend.',
     creator: '@nahueesch',
     images: {
-      url: 'img/view-home-og.png',
+      url: '/img/home-preview.jpg',
       alt: 'Nahuel Scheytt | Frontend Developer Logo',
     },
   },
