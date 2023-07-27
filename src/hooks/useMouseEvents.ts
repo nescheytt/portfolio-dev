@@ -4,18 +4,14 @@ import { MouseEvents } from "@/types/cursor"
 const useMouseEvents = (): MouseEvents => {
   const [isMouseHover, setIsMouseHover] = useState(false)
 
-  const handleMouseOver = () => {
-    setIsMouseHover(true);
-  }
-
-  const handleMouseLeave = () => {
-    setIsMouseHover(false);
+  const handleMouse = (isHovering: boolean) => {
+    setIsMouseHover(isHovering)
   }
 
   return {
     isMouseHover,
-    onMouseOver: handleMouseOver,
-    onMouseLeave: handleMouseLeave
+    onMouseOver: () => handleMouse(true),
+    onMouseLeave: () => handleMouse(false)
   }
 }
 

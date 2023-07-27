@@ -9,23 +9,23 @@ import Experience from '@/components/Experience'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 import ButtonScrollTop from '@/components/ButtonScrollTop'
-
 import useMouseEvents from "@/hooks/useMouseEvents"
 
 export default function Home() {
   const { isMouseHover, onMouseOver, onMouseLeave } = useMouseEvents()
+  const shared = { onMouseOver, onMouseLeave }
 
   return (
     <main>
-      <Header onMouseOver={onMouseOver} onMouseLeave={onMouseLeave} />
+      <Header {...shared} />
       <Cursor isMouseHover={isMouseHover} />
       <ButtonScrollTop />
       <Banner />
-      <About onMouseOver={onMouseOver} onMouseLeave={onMouseLeave} />
-      <Skills onMouseOver={onMouseOver} onMouseLeave={onMouseLeave} />
-      <Experience onMouseOver={onMouseOver} onMouseLeave={onMouseLeave} />
-      <Contact onMouseOver={onMouseOver} onMouseLeave={onMouseLeave} />
-      <Footer onMouseOver={onMouseOver} onMouseLeave={onMouseLeave} />
+      <About {...shared} />
+      <Skills {...shared} />
+      <Experience {...shared} />
+      <Contact {...shared} />
+      <Footer {...shared} />
     </main>
   )
 }
