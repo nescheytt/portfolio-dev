@@ -1,36 +1,6 @@
 import { motion as m } from "framer-motion"
-import { listFrameworksLibsOthers, listLengauges } from "@/constants/skills"
+import { listFrameworksLibsOthers, listLengauges, settingsFramerMotion } from "@/constants/skills"
 import { useMouseEventsContext } from "@/context/mouseEvents"
-
-// set settings 'container' @framer-motion
-const container = {
-  hidden: { 
-    x: "-100%",
-    opacity: 0
-  },
-  show: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      delay: 0.5,
-      duration: 0.5,
-      delayChildren: 1,
-      staggerChildren: 0.2
-    }
-  } 
-}
-
-// set settings 'item' @framer-motion
-const item = {
-  hidden: { 
-    y: 0,
-    opacity: 0
-  },
-  show: {
-    y: "-100%",
-    opacity: 1
-  }
-}
 
 const Skills = () => {
   const mouseEvents = useMouseEventsContext()
@@ -51,30 +21,30 @@ const Skills = () => {
       </div>
 
       <div className="w-full md:max-w-7xl flex flex-col md:flex-row items-baseline justify-end gap-x-20 md:gap-x-10">
-        <m.section variants={container} initial="hidden" whileInView="show" className="flex flex-col gap-y-10">
-          <m.h3 className="text-2xl md:text-xl font-semibold text-gray-700">Languages</m.h3>
+        <m.section variants={settingsFramerMotion.container} initial="hidden" whileInView="show" className="flex flex-col gap-y-10">
+          <h3 className="text-2xl md:text-xl font-semibold text-gray-700">Languages</h3>
 
           <ul className="list-inside list-disc text-gray-600 font-semibold">
             {listLengauges.map((lenguage, index) => (
-              <m.li key={index} variants={item} className="text-lg md:text-base">{lenguage}</m.li>  
+              <m.li key={index} variants={settingsFramerMotion.item} className="text-lg md:text-base">{lenguage}</m.li>  
             ))}
           </ul>
         </m.section>
 
-        <m.section variants={container} initial="hidden" whileInView="show" className="flex flex-col gap-y-10">
+        <m.section variants={settingsFramerMotion.container} initial="hidden" whileInView="show" className="flex flex-col gap-y-10">
           <h3 className="text-2xl md:text-xl font-semibold text-gray-700">Frameworks / Libs / Others</h3>
 
           <ul className="list-inside list-disc text-gray-600 font-semibold">
             {listFrameworksLibsOthers.map((lenguage, index) => (
-              <m.li key={index} variants={item} className="text-lg md:text-base">{lenguage}</m.li>  
+              <m.li key={index} variants={settingsFramerMotion.item} className="text-lg md:text-base">{lenguage}</m.li>  
             ))}
           </ul>
         </m.section>
 
-        <m.section variants={container} initial="hidden" whileInView="show" className="flex flex-col gap-y-10">
+        <m.section variants={settingsFramerMotion.container} initial="hidden" whileInView="show" className="flex flex-col gap-y-10">
           <h3 className="text-2xl md:text-xl font-semibold text-gray-700">Specials</h3>
           
-          <m.p variants={item} className="text-gray-600 font-semibold text-lg md:text-base">Googling <span role="img" aria-label="Tonque" className="ml-2">😜</span></m.p>
+          <m.p variants={settingsFramerMotion.item} className="text-gray-600 font-semibold text-lg md:text-base">Googling <span role="img" aria-label="Tonque" className="ml-2">😜</span></m.p>
         </m.section>
       </div>
     </section>
