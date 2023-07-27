@@ -57,7 +57,7 @@ const Contact = ({ setMouseHover }: Props) => {
       }
 
       if (response.status === 500 || response.status === 400) {
-        toast.error("Hey try again 😅!", {
+        toast.error("Hi, try again 😅!", {
           position: toast.POSITION.BOTTOM_RIGHT
         })
       }

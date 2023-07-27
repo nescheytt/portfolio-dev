@@ -15,7 +15,7 @@ const Banner = () => {
 
           <div className="max-w-xs md:max-w-xl overflow-hidden">
             <m.p animate={{ x: 0 }} initial={{ x: "-100%" }} transition={{ delay: 0.75, duration: 1, type: "spring" }} className="text-gray-800 text-sm md:text-lg uppercase">
-              {`--> Concentrated on building user interfaces in React`}
+              {`--> Focused on building user interfaces in React`}
             </m.p>
           </div>
         </div>
