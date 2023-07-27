@@ -4,6 +4,7 @@ import * as Yup from 'yup'
 import { Formik, Form, Field } from 'formik'
 import { ToastContainer, toast } from 'react-toastify'
 import "react-toastify/dist/ReactToastify.css"
+import { useMouseEventsContext } from '@/context/mouseEvents'
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms))
 
@@ -14,11 +15,9 @@ type FormValues = {
   message: string
 }
 
-type Props = {
-  setMouseHover: (value: boolean) => void
-}
-
-const Contact = ({ setMouseHover }: Props) => {
+const Contact = () => {
+  const mouseEvents = useMouseEventsContext()
+  
   const initialValues = {
     name: '',
     email: '',
@@ -57,7 +56,7 @@ const Contact = ({ setMouseHover }: Props) => {
       }
 
       if (response.status === 500 || response.status === 400) {
-        toast.error("Hey try again 😅!", {
+        toast.error("Hi, try again 😅!", {
           position: toast.POSITION.BOTTOM_RIGHT
         })
       }
@@ -72,7 +71,7 @@ const Contact = ({ setMouseHover }: Props) => {
       <div className="max-w-3xl flex flex-col gap-y-20">
         <div className="w-full">
           <p className="text-gray-800 text-base font-medium uppercase">Have a project in mind?</p>
-          <p className="text-gray-800 text-5xl md:text-6xl lg:text-7xl font-semibold mb-4" onMouseOver={() => setMouseHover(true)} onMouseLeave={() => setMouseHover(false)}>
+          <p className="text-gray-800 text-5xl md:text-6xl lg:text-7xl font-semibold mb-4" onMouseOver={mouseEvents.onMouseOver} onMouseLeave={mouseEvents.onMouseLeave}>
             {`Let's talk`}<span className="text-4xl">↓</span>.
           </p>
           <p className="text-gray-500 text-base font-normal">
@@ -149,8 +148,8 @@ const Contact = ({ setMouseHover }: Props) => {
                   <button
                     type="submit"
                     className="text-gray-700 font-medium text-4xl text-center inline-flex items-center disabled:animate-pulse disabled:text-gray-500 disabled:cursor-not-allowed"
-                    onMouseOver={() => setMouseHover(true)}
-                    onMouseLeave={() => setMouseHover(false)}
+                    onMouseOver={mouseEvents.onMouseOver}
+                    onMouseLeave={mouseEvents.onMouseLeave}
                     disabled={isSubmitting}
                   >
                     <span className="font-semibold mr-6">Send</span>

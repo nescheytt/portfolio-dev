@@ -1,7 +1,5 @@
 "use client"
 
-import { useState } from 'react'
-
 import Cursor from '@/components/Cursor'
 import Header from '@/components/Header'
 import Banner from '@/components/Banner'
@@ -11,21 +9,25 @@ import Experience from '@/components/Experience'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 import ButtonScrollTop from '@/components/ButtonScrollTop'
+import { MouseEventsContext } from '@/context/mouseEvents'
+import useMouseEvents from "@/hooks/useMouseEvents"
 
 export default function Home() {
-  const [mouseHover, setMouseHover] = useState(false)
+  const { isMouseHover, onMouseOver, onMouseLeave } = useMouseEvents()
 
   return (
     <main>
-      <Header setMouseHover={setMouseHover} />
-      <Cursor mouseHover={mouseHover} />
-      <ButtonScrollTop />
-      <Banner />
-      <About setMouseHover={setMouseHover} />
-      <Skills setMouseHover={setMouseHover} />
-      <Experience setMouseHover={setMouseHover} />
-      <Contact setMouseHover={setMouseHover} />
-      <Footer setMouseHover={setMouseHover} />
+      <MouseEventsContext.Provider value={{ isMouseHover, onMouseOver, onMouseLeave }}>
+        <Header />
+        <Cursor />
+        <ButtonScrollTop />
+        <Banner />
+        <About />
+        <Skills />
+        <Experience />
+        <Contact />
+        <Footer />
+      </MouseEventsContext.Provider>
     </main>
   )
 }
