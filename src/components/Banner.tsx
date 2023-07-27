@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { motion as m } from 'framer-motion'
-import PictureProfile from '@/img/profile.jpg'
+import PictureProfile from '@/assets/images/profile.jpg'
 
 const Banner = () => {
   return (
