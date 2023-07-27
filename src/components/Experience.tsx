@@ -1,10 +1,7 @@
+import { SetMouseHover } from "@/types/cursor"
 import { motion as m } from "framer-motion"
 
-type Props = {
-  setMouseHover: (value: boolean) => void
-}
-
-const Experience = ({ setMouseHover }: Props) => {
+const Experience = ({ setMouseHover }: SetMouseHover) => {
   return (
     <section className="w-full h-full md:h-screen bg-gray-800 flex flex-col justify-center gap-y-20 md:gap-y-10 py-24 px-8 md:py-12 md:px-12 lg:px-24 rounded-b-xl">
       <div className="w-full overflow-hidden lg:mb-20">

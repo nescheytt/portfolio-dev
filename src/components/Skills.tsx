@@ -1,5 +1,6 @@
 import { motion as m } from "framer-motion"
 import { listFrameworksLibsOthers, listLengauges } from "@/constants/skills"
+import { SetMouseHover } from "@/types/cursor"
 
 // set settings 'container' @framer-motion
 const container = {
@@ -31,11 +32,7 @@ const item = {
   }
 }
 
-type Props = {
-  setMouseHover: (value: boolean) => void
-}
-
-const Skills = ({ setMouseHover }: Props) => {
+const Skills = ({ setMouseHover }: SetMouseHover) => {
   return (
     <section className="w-full h-full md:h-screen flex flex-col justify-center gap-y-10 p-6 py-24 px-12 md:py-12 lg:px-24">
       <div className="w-full overflow-hidden">

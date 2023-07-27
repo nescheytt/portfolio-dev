@@ -4,6 +4,7 @@ import * as Yup from 'yup'
 import { Formik, Form, Field } from 'formik'
 import { ToastContainer, toast } from 'react-toastify'
 import "react-toastify/dist/ReactToastify.css"
+import { SetMouseHover } from '@/types/cursor'
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms))
 
@@ -14,11 +15,7 @@ type FormValues = {
   message: string
 }
 
-type Props = {
-  setMouseHover: (value: boolean) => void
-}
-
-const Contact = ({ setMouseHover }: Props) => {
+const Contact = ({ setMouseHover }: SetMouseHover) => {
   const initialValues = {
     name: '',
     email: '',

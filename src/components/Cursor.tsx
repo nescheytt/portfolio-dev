@@ -1,10 +1,7 @@
 import { useEffect, useState } from "react"
+import { MouseHover } from "@/types/cursor"
 
-type Props = {
-  mouseHover: boolean
-}
-
-const Cursor = ({ mouseHover }: Props) => {
+const Cursor = ({ mouseHover }: MouseHover) => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 
   useEffect(() => {

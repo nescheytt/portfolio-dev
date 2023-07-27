@@ -1,10 +1,7 @@
+import { SetMouseHover } from "@/types/cursor"
 import { motion as m } from "framer-motion"
 
-type Props = {
-  setMouseHover: (value: boolean) => void
-}
-
-const Header = ({ setMouseHover }: Props) => {
+const Header = ({ setMouseHover }: SetMouseHover) => {
   return (
     <header className="w-full flex items-center justify-between overflow-hidden px-4 lg:p-12 mix-blend-difference absolute top-4 lg:top-0 z-10">
       <m.div animate={{ opacity: 1 }} initial={{ opacity: 0 }} transition={{ delay: 2.50, duration: 1 }} onMouseOver={() => setMouseHover(true)} onMouseLeave={() => setMouseHover(false)}>

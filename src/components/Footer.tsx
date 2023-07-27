@@ -1,8 +1,6 @@
-type Props = {
-  setMouseHover: (value: boolean) => void
-}
+import { SetMouseHover } from "@/types/cursor"
 
-const Footer = ({ setMouseHover }: Props) => {
+const Footer = ({ setMouseHover }: SetMouseHover) => {
   return (
     <footer className="w-full flex flex-col md:flex-row justify-between items-center border-t border-gray-300 py-8 px-8 md:px-12 md:pt-6 gap-y-10 md:gap-y-0">
       <ul className="w-full flex justify-center md:justify-start gap-x-4">

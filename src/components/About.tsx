@@ -1,8 +1,6 @@
-type Props = {
-  setMouseHover: (value: boolean) => void
-}
+import { SetMouseHover } from "@/types/cursor"
 
-const About = ({ setMouseHover }: Props) => {
+const About = ({ setMouseHover }: SetMouseHover) => {
   return (
     <section className="bg-gray-800 w-full md:h-screen flex flex-col justify-center items-center py-24 px-4 md:px-24 rounded-b-xl bg-gradient-radial from-gray-700 via-gray-800 to-gray-800 ">
       <div className="w-full md:max-w-4xl flex flex-col cursor-default gap-y-4 md:gap-y-8" onMouseOver={() => setMouseHover(true)} onMouseLeave={() => setMouseHover(false)}>
