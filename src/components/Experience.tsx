@@ -1,7 +1,7 @@
-import { SetMouseHover } from "@/types/cursor"
+import { MouseEvents } from "@/types/cursor"
 import { motion as m } from "framer-motion"
 
-const Experience = ({ setMouseHover }: SetMouseHover) => {
+const Experience = ({ onMouseOver, onMouseLeave }: MouseEvents) => {
   return (
     <section className="w-full h-full md:h-screen bg-gray-800 flex flex-col justify-center gap-y-20 md:gap-y-10 py-24 px-8 md:py-12 md:px-12 lg:px-24 rounded-b-xl">
       <div className="w-full overflow-hidden lg:mb-20">
@@ -10,8 +10,8 @@ const Experience = ({ setMouseHover }: SetMouseHover) => {
           whileInView={{ x: 0 }}
           transition={{ delay: 0.50, duration: 0.75, type: "spring" }}
           className="flex text-gray-400 text-5xl md:text-6xl lg:text-7xl font-semibold"
-          onMouseOver={() => setMouseHover(true)}
-          onMouseLeave={() => setMouseHover(false)}
+          onMouseOver={onMouseOver}
+          onMouseLeave={onMouseLeave}
         >
           Experience.
         </m.h2>
@@ -25,8 +25,8 @@ const Experience = ({ setMouseHover }: SetMouseHover) => {
           transition={{ delay: 1, duration: 1 }}
           className="max-content flex items-center gap-x-1 hover:text-sky-500 hover:underline max-sm:order-1"
           target="_blank"
-          onMouseOver={() => setMouseHover(true)}
-          onMouseLeave={() => setMouseHover(false)}
+          onMouseOver={onMouseOver}
+          onMouseLeave={onMouseLeave}
         >
           RESUME
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-4 h-4">
@@ -51,7 +51,7 @@ const Experience = ({ setMouseHover }: SetMouseHover) => {
               <h3 className="text-lg font-medium text-white">
                 Frontend Developer <span className="text-gray-500">at</span>
               </h3>
-              <a href="https://www.linkedin.com/company/jobint" className="flex items-center gap-x-1 hover:text-sky-500 hover:underline" target="_blank" onMouseOver={() => setMouseHover(true)} onMouseLeave={() => setMouseHover(false)}>
+              <a href="https://www.linkedin.com/company/jobint" className="flex items-center gap-x-1 hover:text-sky-500 hover:underline" target="_blank" onMouseOver={onMouseOver} onMouseLeave={onMouseLeave}>
                 Jobint
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-4 h-4">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
@@ -70,7 +70,7 @@ const Experience = ({ setMouseHover }: SetMouseHover) => {
               <h3 className="text-lg font-medium text-white">
                 Frontend Developer <span className="text-gray-500">at</span>
               </h3>
-              <a href="https://www.linkedin.com/company/navent" className="flex items-center gap-x-1 hover:text-sky-500 hover:underline" target="_blank" onMouseOver={() => setMouseHover(true)} onMouseLeave={() => setMouseHover(false)}>
+              <a href="https://www.linkedin.com/company/navent" className="flex items-center gap-x-1 hover:text-sky-500 hover:underline" target="_blank" onMouseOver={onMouseOver} onMouseLeave={onMouseLeave}>
                 Navent
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-4 h-4">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
@@ -89,7 +89,7 @@ const Experience = ({ setMouseHover }: SetMouseHover) => {
               <h3 className="text-lg font-medium text-white">
                 Graphic Designer & Web <span className="text-gray-500">at</span>
               </h3>
-              <a href="https://www.linkedin.com/company/resermap" className="flex items-center gap-x-1 hover:text-sky-500 hover:underline" target="_blank" onMouseOver={() => setMouseHover(true)} onMouseLeave={() => setMouseHover(false)}>
+              <a href="https://www.linkedin.com/company/resermap" className="flex items-center gap-x-1 hover:text-sky-500 hover:underline" target="_blank" onMouseOver={onMouseOver} onMouseLeave={onMouseLeave}>
                 Resermap
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-4 h-4">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />

@@ -1,7 +1,5 @@
 "use client"
 
-import { useState } from 'react'
-
 import Cursor from '@/components/Cursor'
 import Header from '@/components/Header'
 import Banner from '@/components/Banner'
@@ -12,20 +10,22 @@ import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 import ButtonScrollTop from '@/components/ButtonScrollTop'
 
+import useMouseEvents from "@/hooks/useMouseEvents"
+
 export default function Home() {
-  const [mouseHover, setMouseHover] = useState(false)
+  const { isMouseHover, onMouseOver, onMouseLeave } = useMouseEvents()
 
   return (
     <main>
-      <Header setMouseHover={setMouseHover} />
-      <Cursor mouseHover={mouseHover} />
+      <Header onMouseOver={onMouseOver} onMouseLeave={onMouseLeave} />
+      <Cursor isMouseHover={isMouseHover} />
       <ButtonScrollTop />
       <Banner />
-      <About setMouseHover={setMouseHover} />
-      <Skills setMouseHover={setMouseHover} />
-      <Experience setMouseHover={setMouseHover} />
-      <Contact setMouseHover={setMouseHover} />
-      <Footer setMouseHover={setMouseHover} />
+      <About onMouseOver={onMouseOver} onMouseLeave={onMouseLeave} />
+      <Skills onMouseOver={onMouseOver} onMouseLeave={onMouseLeave} />
+      <Experience onMouseOver={onMouseOver} onMouseLeave={onMouseLeave} />
+      <Contact onMouseOver={onMouseOver} onMouseLeave={onMouseLeave} />
+      <Footer onMouseOver={onMouseOver} onMouseLeave={onMouseLeave} />
     </main>
   )
 }

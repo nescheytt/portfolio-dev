@@ -1,9 +1,9 @@
-import { SetMouseHover } from "@/types/cursor"
+import { MouseEvents } from "@/types/cursor"
 
-const About = ({ setMouseHover }: SetMouseHover) => {
+const About = ({ onMouseOver, onMouseLeave }: MouseEvents) => {
   return (
     <section className="bg-gray-800 w-full md:h-screen flex flex-col justify-center items-center py-24 px-4 md:px-24 rounded-b-xl bg-gradient-radial from-gray-700 via-gray-800 to-gray-800 ">
-      <div className="w-full md:max-w-4xl flex flex-col cursor-default gap-y-4 md:gap-y-8" onMouseOver={() => setMouseHover(true)} onMouseLeave={() => setMouseHover(false)}>
+      <div className="w-full md:max-w-4xl flex flex-col cursor-default gap-y-4 md:gap-y-8" onMouseOver={onMouseOver} onMouseLeave={onMouseLeave}>
         <p className="text-gray-500 font-bold text-2xl max-md:text-center md:text-4xl hover:text-gray-300 transition duration-500 hover:scale-105">
           I started this passionate adventure in web technologies <span className="text-gray-300">8+ years</span> ago.
         </p>

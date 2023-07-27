@@ -1,9 +1,5 @@
-import { Dispatch, SetStateAction } from "react"
-
-export type SetMouseHover = {
-  setMouseHover: Dispatch<SetStateAction<boolean>>
-}
-
-export type MouseHover = {
-  mouseHover: boolean
+export type MouseEvents = {
+  isMouseHover?: boolean
+  onMouseOver?: () => void
+  onMouseLeave?: () => void
 }
