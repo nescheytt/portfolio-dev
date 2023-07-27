@@ -1,5 +1,6 @@
-import { useMouseEventsContext } from "@/context/mouseEvents"
 import { motion as m } from "framer-motion"
+import { useMouseEventsContext } from "@/context/mouseEvents"
+import { listExperiences } from "@/constants/experience"
 
 const Experience = () => {
   const mouseEvents = useMouseEventsContext()
@@ -37,72 +38,36 @@ const Experience = () => {
         </m.a>
 
         <m.ol initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ delay: 0.75, duration: 1 }} className="relative border-l border-gray-200 dark:border-gray-700 space-y-10">
-          <li className="ml-4 md:ml-6">
-            <div className="absolute w-4 h-4 bg-gray-200 rounded-full mt-1.5 -left-2 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-            <h3 className="text-lg font-semibold text-white flex mb-1 md:mb-0">
-              Frontend Developer Freelance
-            </h3>
-            <div className="flex flex-col md:flex-row md:items-center">
-              <time className="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">February 2023 - PRESENT</time>
-            </div>
-          </li>
+          {listExperiences.map((experience, index) => {
+            return (
+              <li key={index} className="ml-4 md:ml-6">
+                <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                <div className="flex mb-1 lg:mb-0 gap-x-1">
+                  <h3 className="text-lg font-medium text-white">
+                    {experience.position} <span className="text-gray-500">at</span>
+                  </h3>
 
-          <li className="ml-4 md:ml-6">
-            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-            <div className="flex mb-1 lg:mb-0 gap-x-1">
-              <h3 className="text-lg font-medium text-white">
-                Frontend Developer <span className="text-gray-500">at</span>
-              </h3>
-              <a href="https://www.linkedin.com/company/jobint" className="flex items-center gap-x-1 hover:text-sky-500 hover:underline" target="_blank" onMouseOver={mouseEvents.onMouseOver} onMouseLeave={mouseEvents.onMouseLeave}>
-                Jobint
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-4 h-4">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                </svg>
-              </a>
-            </div>
-            <div className="flex flex-col lg:flex-row lg:items-center gap-x-2 gap-y-2 lg:gap-y-0">
-              <time className="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">January 2022 - February 2023</time>
-              <p className="text-sm font-normal text-gray-400 dark:text-gray-500">(1 year 1 month)</p>
-            </div>
-          </li>
+                  <a
+                    href={experience.company.href}
+                    className="flex items-center gap-x-1 hover:text-sky-500 hover:underline"
+                    target="_blank"
+                    onMouseOver={mouseEvents.onMouseOver}
+                    onMouseLeave={mouseEvents.onMouseLeave}
+                  >
+                    {experience.company.name}
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-4 h-4">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                    </svg>
+                  </a>
+                </div>
 
-          <li className="ml-4 md:ml-6">
-            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-            <div className="flex mb-1 lg:mb-0 gap-x-1">
-              <h3 className="text-lg font-medium text-white">
-                Frontend Developer <span className="text-gray-500">at</span>
-              </h3>
-              <a href="https://www.linkedin.com/company/navent" className="flex items-center gap-x-1 hover:text-sky-500 hover:underline" target="_blank" onMouseOver={mouseEvents.onMouseOver} onMouseLeave={mouseEvents.onMouseLeave}>
-                Navent
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-4 h-4">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                </svg>
-              </a>
-            </div>
-            <div className="flex flex-col lg:flex-row lg:items-center gap-x-2 gap-y-2 lg:gap-y-0">
-              <time className="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">June 2015 - January 2022</time>
-              <p className="text-sm font-normal text-gray-400 dark:text-gray-500">(6 years 8 months)</p>
-            </div>
-          </li>
-
-          <li className="ml-4 md:ml-6">
-            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-            <div className="flex flex-col lg:flex-row mb-1 lg:mb-0 gap-x-1">
-              <h3 className="text-lg font-medium text-white">
-                Graphic Designer & Web <span className="text-gray-500">at</span>
-              </h3>
-              <a href="https://www.linkedin.com/company/resermap" className="flex items-center gap-x-1 hover:text-sky-500 hover:underline" target="_blank" onMouseOver={mouseEvents.onMouseOver} onMouseLeave={mouseEvents.onMouseLeave}>
-                Resermap
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-4 h-4">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                </svg>
-              </a>
-            </div>
-            <div className="flex flex-col lg:flex-row lg:items-center gap-x-2 gap-y-2 lg:gap-y-0">
-              <time className="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">August 2013 - June 2015</time>
-              <p className="text-sm font-normal text-gray-400 dark:text-gray-500">(1 year 11 months)</p>
-            </div>
-          </li>
+                <div className="flex flex-col lg:flex-row lg:items-center gap-x-2 gap-y-2 lg:gap-y-0">
+                  <time className="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">{experience.date.fromTo}</time>
+                  <p className="text-sm font-normal text-gray-400 dark:text-gray-500">{experience.date.total}</p>
+                </div>
+              </li>
+            )
+          })}
         </m.ol>
       </div>
     </section>
