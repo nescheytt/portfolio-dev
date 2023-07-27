@@ -63,7 +63,7 @@ const Skills = ({ setMouseHover }: Props) => {
 
       <div className="w-full md:max-w-7xl flex flex-col md:flex-row items-baseline justify-end gap-x-20 md:gap-x-10">
         <m.section variants={container} initial="hidden" whileInView="show" className="flex flex-col gap-y-10">
-          <m.h3 className="text-2xl md:text-xl font-semibold text-gray-700">Lenguages</m.h3>
+          <m.h3 className="text-2xl md:text-xl font-semibold text-gray-700">Languages</m.h3>
 
           <ul className="list-inside list-disc text-gray-600 font-semibold">
             {listLengauges.map((lenguage, index) => (
