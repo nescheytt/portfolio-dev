@@ -1,18 +1,7 @@
 import { motion as m } from "framer-motion"
+import { listFrameworksLibsOthers, listLengauges } from "@/constants/skills"
 
-const listLengauges = ['HTML', 'CSS', 'LESS/SASS', 'VanillaJS', 'TypeScript']
-const listFrameworksLibsOthers = ['React.js', 'Next.js', 'JQuery', 'Redux', 'Node.js', 'RestAPIs', 'Express.js', 'Git', 'Jest', 'React Testing Library', 'Styled Components', 'Tailwind CSS', 'Chakra UI', 'Material UI', 'Ant Design', 'Bootstrap', 'Storybook', 'Figma', 'Vercel']
-const listSpecials = [
-  {
-    name: 'Googling',
-    icon: <span role="img" aria-label="Tonque" className="ml-2">😜</span>
-  },
-  {
-    name: 'StackOverflowing',
-    icon: <span role="img" aria-label="Tonque" className="ml-2">😅</span>
-  }
-]
-
+// set settings 'container' @framer-motion
 const container = {
   hidden: { 
     x: "-100%",
@@ -30,6 +19,7 @@ const container = {
   } 
 }
 
+// set settings 'item' @framer-motion
 const item = {
   hidden: { 
     y: 0,
@@ -84,12 +74,8 @@ const Skills = ({ setMouseHover }: Props) => {
 
         <m.section variants={container} initial="hidden" whileInView="show" className="flex flex-col gap-y-10">
           <h3 className="text-2xl md:text-xl font-semibold text-gray-700">Specials</h3>
-
-          <ul className="list-inside list-disc text-gray-600 font-semibold">
-            {listSpecials.map((lenguage, index) => (
-              <m.li key={index} variants={item} className="text-lg md:text-base">{lenguage.name}{lenguage.icon}</m.li>
-            ))}
-          </ul>
+          
+          <m.p variants={item} className="text-gray-600 font-semibold text-lg md:text-base">Googling <span role="img" aria-label="Tonque" className="ml-2">😜</span></m.p>
         </m.section>
       </div>
     </section>
