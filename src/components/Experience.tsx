@@ -7,7 +7,7 @@ const Experience = () => {
 
   return (
     <section className="w-full h-full md:h-screen bg-gray-800 flex flex-col justify-center gap-y-20 md:gap-y-10 py-24 px-8 md:py-12 md:px-12 lg:px-24 rounded-b-xl">
-      <div className="w-full overflow-hidden lg:mb-20">
+      <div className="flex overflow-hidden lg:mb-20">
         <m.h2
           initial={{ x: "-100%" }}
           whileInView={{ x: 0 }}
@@ -21,21 +21,23 @@ const Experience = () => {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 items-end gap-20 sm:gap-10">
-        <m.a
-          href="https://drive.google.com/file/d/1g1J3LO-C5CFq6snWIN8gtJV-PZb8IRpA/view?usp=drive_link"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 1 }}
-          className="max-content flex items-center gap-x-1 hover:text-sky-500 hover:underline max-sm:order-1"
-          target="_blank"
-          onMouseOver={mouseEvents.onMouseOver}
-          onMouseLeave={mouseEvents.onMouseLeave}
-        >
-          RESUME
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-4 h-4">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-          </svg>
-        </m.a>
+        <div className="flex">
+          <m.a
+            href="https://drive.google.com/file/d/1g1J3LO-C5CFq6snWIN8gtJV-PZb8IRpA/view?usp=drive_link"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 1, duration: 1 }}
+            className="flex items-center gap-x-1 hover:text-sky-500 hover:underline max-sm:order-1"
+            target="_blank"
+            onMouseOver={mouseEvents.onMouseOver}
+            onMouseLeave={mouseEvents.onMouseLeave}
+          >
+            RESUME
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-4 h-4">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+            </svg>
+          </m.a>
+        </div>
 
         <m.ol initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ delay: 0.75, duration: 1 }} className="relative border-l border-gray-200 dark:border-gray-700 space-y-10">
           {listExperiences.map((experience, index) => {
