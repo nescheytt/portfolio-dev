@@ -7,7 +7,7 @@ const Skills = () => {
   
   return (
     <section className="w-full h-full md:h-screen flex flex-col justify-center gap-y-10 p-6 py-24 px-12 md:py-12 lg:px-24">
-      <div className="flex overflow-hidden">
+      <div className="max-md:w-full md:flex overflow-hidden">
         <m.h2
           initial={{ x: "-100%" }}
           whileInView={{ x: 0 }}

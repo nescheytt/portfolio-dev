@@ -7,7 +7,7 @@ const Experience = () => {
 
   return (
     <section className="w-full h-full md:h-screen bg-gray-800 flex flex-col justify-center gap-y-20 md:gap-y-10 py-24 px-8 md:py-12 md:px-12 lg:px-24 rounded-b-xl">
-      <div className="flex overflow-hidden lg:mb-20">
+      <div className="max-md:w-full md:flex overflow-hidden lg:mb-20">
         <m.h2
           initial={{ x: "-100%" }}
           whileInView={{ x: 0 }}
@@ -21,13 +21,13 @@ const Experience = () => {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 items-end gap-20 sm:gap-10">
-        <div className="flex">
+        <div className="flex max-sm:order-1">
           <m.a
             href="https://drive.google.com/file/d/1g1J3LO-C5CFq6snWIN8gtJV-PZb8IRpA/view?usp=drive_link"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 1, duration: 1 }}
-            className="flex items-center gap-x-1 hover:text-sky-500 hover:underline max-sm:order-1"
+            className="flex items-center gap-x-1 hover:text-sky-500 hover:underline"
             target="_blank"
             onMouseOver={mouseEvents.onMouseOver}
             onMouseLeave={mouseEvents.onMouseLeave}
