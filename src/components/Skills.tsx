@@ -1,6 +1,6 @@
 import { motion as m } from "framer-motion"
 import { listFrameworksLibsOthers, listLengauges } from "@/constants/skills"
-import { MouseEvents } from "@/types/cursor"
+import { useMouseEventsContext } from "@/context/mouseEvents"
 
 // set settings 'container' @framer-motion
 const container = {
@@ -32,7 +32,9 @@ const item = {
   }
 }
 
-const Skills = ({ onMouseOver, onMouseLeave }: MouseEvents) => {
+const Skills = () => {
+  const mouseEvents = useMouseEventsContext()
+  
   return (
     <section className="w-full h-full md:h-screen flex flex-col justify-center gap-y-10 p-6 py-24 px-12 md:py-12 lg:px-24">
       <div className="w-full overflow-hidden">
@@ -41,8 +43,8 @@ const Skills = ({ onMouseOver, onMouseLeave }: MouseEvents) => {
           whileInView={{ x: 0 }}
           transition={{ delay: 0.50, duration: 0.75, type: "spring" }}
           className="flex text-gray-800 text-5xl md:text-6xl lg:text-7xl font-semibold"
-          onMouseOver={onMouseOver}
-          onMouseLeave={onMouseLeave}
+          onMouseOver={mouseEvents.onMouseOver}
+          onMouseLeave={mouseEvents.onMouseLeave}
         >
           Skills.
         </m.h2>

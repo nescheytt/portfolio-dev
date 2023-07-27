@@ -9,23 +9,25 @@ import Experience from '@/components/Experience'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 import ButtonScrollTop from '@/components/ButtonScrollTop'
+import { MouseEventsContext } from '@/context/mouseEvents'
 import useMouseEvents from "@/hooks/useMouseEvents"
 
 export default function Home() {
   const { isMouseHover, onMouseOver, onMouseLeave } = useMouseEvents()
-  const shared = { onMouseOver, onMouseLeave }
 
   return (
     <main>
-      <Header {...shared} />
-      <Cursor isMouseHover={isMouseHover} />
-      <ButtonScrollTop />
-      <Banner />
-      <About {...shared} />
-      <Skills {...shared} />
-      <Experience {...shared} />
-      <Contact {...shared} />
-      <Footer {...shared} />
+      <MouseEventsContext.Provider value={{ isMouseHover, onMouseOver, onMouseLeave }}>
+        <Header />
+        <Cursor />
+        <ButtonScrollTop />
+        <Banner />
+        <About />
+        <Skills />
+        <Experience />
+        <Contact />
+        <Footer />
+      </MouseEventsContext.Provider>
     </main>
   )
 }

@@ -1,7 +1,6 @@
 import { useState } from "react"
-import { MouseEvents } from "@/types/cursor"
 
-const useMouseEvents = (): MouseEvents => {
+const useMouseEvents = () => {
   const [isMouseHover, setIsMouseHover] = useState(false)
 
   const handleMouse = (isHovering: boolean) => {
