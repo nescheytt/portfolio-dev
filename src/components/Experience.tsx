@@ -7,7 +7,7 @@ const Experience = () => {
 
   return (
     <section className="w-full h-full md:h-screen bg-gray-800 flex flex-col justify-center gap-y-20 md:gap-y-10 py-24 px-8 md:py-12 md:px-12 lg:px-24 rounded-b-xl">
-      <div className="max-md:w-full md:w-auto overflow-hidden lg:mb-20">
+      <div className="max-md:w-full md:flex overflow-hidden lg:mb-20">
         <m.h2
           initial={{ x: "-100%" }}
           whileInView={{ x: 0 }}
