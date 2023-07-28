@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import Cursor from '@/components/Cursor'
 import Header from '@/components/Header'
