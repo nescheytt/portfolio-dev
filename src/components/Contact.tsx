@@ -3,7 +3,7 @@
 import * as Yup from 'yup'
 import { Formik, Form, Field } from 'formik'
 import { ToastContainer, toast } from 'react-toastify'
-import "react-toastify/dist/ReactToastify.css"
+import 'react-toastify/dist/ReactToastify.css'
 import { useMouseEventsContext } from '@/context/mouseEvents'
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms))

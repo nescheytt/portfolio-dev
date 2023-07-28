@@ -10,7 +10,7 @@ import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 import ButtonScrollTop from '@/components/ButtonScrollTop'
 import { MouseEventsContext } from '@/context/mouseEvents'
-import useMouseEvents from "@/hooks/useMouseEvents"
+import useMouseEvents from '@/hooks/useMouseEvents'
 
 export default function Home() {
   const { isMouseHover, onMouseOver, onMouseLeave } = useMouseEvents()

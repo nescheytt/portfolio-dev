@@ -1,5 +1,5 @@
-import { useMouseEventsContext } from "@/context/mouseEvents"
-import { motion as m } from "framer-motion"
+import { useMouseEventsContext } from '@/context/mouseEvents'
+import { motion as m } from 'framer-motion'
 
 const Header = () => {
   const mouseEvents = useMouseEventsContext()

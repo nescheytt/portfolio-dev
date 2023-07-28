@@ -1,6 +1,6 @@
-import { motion as m } from "framer-motion"
-import { useMouseEventsContext } from "@/context/mouseEvents"
-import { listExperiences } from "@/constants/experience"
+import { motion as m } from 'framer-motion'
+import { useMouseEventsContext } from '@/context/mouseEvents'
+import { listExperiences } from '@/constants/experience'
 
 const Experience = () => {
   const mouseEvents = useMouseEventsContext()

@@ -1,5 +1,5 @@
-import { useMouseEventsContext } from "@/context/mouseEvents"
-import useMouseMove from "@/hooks/useMouseMove"
+import { useMouseEventsContext } from '@/context/mouseEvents'
+import useMouseMove from '@/hooks/useMouseMove'
 
 const Cursor = () => {
   const mouseEvents = useMouseEventsContext()

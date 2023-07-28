@@ -1,5 +1,5 @@
-import { useMouseEventsContext } from "@/context/mouseEvents"
-import { listItems } from "@/constants/footer"
+import { useMouseEventsContext } from '@/context/mouseEvents'
+import { listItems } from '@/constants/footer'
 
 const Footer = () => {
   const mouseEvents = useMouseEventsContext()
