@@ -1,6 +1,6 @@
-import { motion as m } from "framer-motion"
-import { listFrameworksLibsOthers, listLengauges, settingsFramerMotion } from "@/constants/skills"
-import { useMouseEventsContext } from "@/context/mouseEvents"
+import { motion as m } from 'framer-motion'
+import { listFrameworksLibsOthers, listLengauges, settingsFramerMotion } from '@/constants/skills'
+import { useMouseEventsContext } from '@/context/mouseEvents'
 
 const Skills = () => {
   const mouseEvents = useMouseEventsContext()
