@@ -6,8 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint --no-cache",
-    "lint:fix": "next lint --fix --no-cache"
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "format:write": "prettier \"**/*.{ts,tsx}\" --write",
+    "format:check": "prettier \"**/*.{ts,tsx}\" --check"
   },
   "dependencies": {
     "@types/node": "20.4.1",
