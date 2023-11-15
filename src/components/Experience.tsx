@@ -1,6 +1,6 @@
-import { motion as m } from 'framer-motion'
-import { useMouseEventsContext } from '@/context/mouseEvents'
-import { listExperiences } from '@/data/experience'
+import { motion as m } from "framer-motion"
+import { useMouseEventsContext } from "@/context/mouseEvents"
+import { listExperiences } from "@/data/experience"
 
 const Experience = () => {
   const mouseEvents = useMouseEventsContext()
@@ -50,12 +50,17 @@ const Experience = () => {
           </m.a>
         </div>
 
-        <m.ol initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ delay: 0.75, duration: 1 }} className="relative border-l border-gray-200 dark:border-gray-700 space-y-10">
+        <m.ol
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.75, duration: 1 }}
+          className="relative space-y-10 border-l border-gray-200 dark:border-gray-700"
+        >
           {listExperiences.map((experience) => {
             return (
               <li key={experience.id} className="ml-4 md:ml-6">
-                <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                <div className="flex mb-1 lg:mb-0 gap-x-1">
+                <div className="absolute -left-1.5 mt-1.5 h-3 w-3 rounded-full border border-white bg-gray-200 dark:border-gray-900 dark:bg-gray-700"></div>
+                <div className="mb-1 flex gap-x-1 lg:mb-0">
                   <h3 className="text-lg font-medium text-white">
                     {experience.position}{" "}
                     <span className="text-gray-500">at</span>
