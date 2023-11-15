@@ -1,8 +1,8 @@
-import '@/styles/globals.css'
-import { Inter } from 'next/font/google'
-import { configMetadata } from '@/config/metadata'
+import "@/styles/globals.css"
+import { Inter } from "next/font/google"
+import { configMetadata } from "@/config/metadata"
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] })
 export const metadata = configMetadata
 
 export default function RootLayout({
