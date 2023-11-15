@@ -7,25 +7,25 @@ const useScrollTop = () => {
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: 'smooth',
-    });
-  };
-  
+      behavior: "smooth",
+    })
+  }
+
   useEffect(() => {
     const handleScroll = () => {
-      const scrollThreshold = 600;
+      const scrollThreshold = 600
       setShowButton(window.scrollY > scrollThreshold)
-    };
-    
-    window.addEventListener('scroll', handleScroll);
+    }
+
+    window.addEventListener("scroll", handleScroll)
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
 
   return {
     showButton,
-    scrollToTop: handleScrollToTop
+    scrollToTop: handleScrollToTop,
   }
 }
 

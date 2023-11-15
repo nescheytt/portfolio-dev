@@ -4,7 +4,7 @@ const useMouseMove = () => {
   const [coors, setCoors] = useState({ x: 0, y: 0 })
 
   useEffect(() => {
-    const mouseMove = (e: { clientX: number; clientY: number; }) => {
+    const mouseMove = (e: { clientX: number; clientY: number }) => {
       setCoors({ x: e.clientX, y: e.clientY })
     }
 
@@ -16,7 +16,7 @@ const useMouseMove = () => {
   }, [])
 
   return {
-    coors
+    coors,
   }
 }
 

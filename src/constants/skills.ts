@@ -1,31 +1,31 @@
 export const listLengauges = [
-  'HTML',
-  'CSS',
-  'LESS/SASS',
-  'VanillaJS',
-  'TypeScript'
+  "HTML",
+  "CSS",
+  "LESS/SASS",
+  "VanillaJS",
+  "TypeScript",
 ]
 
 export const listFrameworksLibsOthers = [
-  'React.js',
-  'Next.js',
-  'JQuery',
-  'Redux',
-  'Node.js',
-  'RestAPIs',
-  'Express.js',
-  'Git',
-  'Jest',
-  'React Testing Library',
-  'Styled Components',
-  'Tailwind CSS',
-  'Chakra UI',
-  'Material UI',
-  'Ant Design',
-  'Bootstrap',
-  'Storybook',
-  'Figma',
-  'Vercel'
+  "React.js",
+  "Next.js",
+  "JQuery",
+  "Redux",
+  "Node.js",
+  "RestAPIs",
+  "Express.js",
+  "Git",
+  "Jest",
+  "React Testing Library",
+  "Styled Components",
+  "Tailwind CSS",
+  "Chakra UI",
+  "Material UI",
+  "Ant Design",
+  "Bootstrap",
+  "Storybook",
+  "Figma",
+  "Vercel",
 ]
 
 /**
@@ -34,9 +34,9 @@ export const listFrameworksLibsOthers = [
 export const settingsFramerMotion = {
   // parent
   container: {
-    hidden: { 
+    hidden: {
       x: "-100%",
-      opacity: 0
+      opacity: 0,
     },
     show: {
       x: 0,
@@ -45,19 +45,19 @@ export const settingsFramerMotion = {
         delay: 0.5,
         duration: 0.5,
         delayChildren: 1,
-        staggerChildren: 0.2
-      }
-    } 
+        staggerChildren: 0.2,
+      },
+    },
   },
   // childrens
   item: {
-    hidden: { 
+    hidden: {
       y: 0,
-      opacity: 0
+      opacity: 0,
     },
     show: {
       y: "-100%",
-      opacity: 1
-    }
-  }
+      opacity: 1,
+    },
+  },
 }

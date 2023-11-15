@@ -10,7 +10,7 @@ const useMouseEvents = () => {
   return {
     isMouseHover,
     onMouseOver: () => handleMouse(true),
-    onMouseLeave: () => handleMouse(false)
+    onMouseLeave: () => handleMouse(false),
   }
 }
 

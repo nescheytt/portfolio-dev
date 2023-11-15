@@ -45,11 +45,9 @@ $ pnpm install
 $ pnpm dev
 ```
 
-
 ## Comments
 
 If you liked this template or it has helped you in any way, I'd like you send me an email at <nahuel.scheytt@gmail.com> about anything you'd want to say about. I'd really appreciate it
-
 
 ---
 
@@ -57,4 +55,3 @@ If you liked this template or it has helped you in any way, I'd like you send me
 > GitHub [@nescheytt](https://github.com/nescheytt) &nbsp;&middot;&nbsp;
 > LinkedIn [@nahuel-scheytt](https://www.linkedin.com/in/nahuel-scheytt/) &nbsp;&middot;&nbsp;
 > Twitter [@nahueesch](https://twitter.com/nahueesch)
-
