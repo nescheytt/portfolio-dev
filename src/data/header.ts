@@ -4,7 +4,7 @@ type MenuItems = {
 	href: string
 }
 
-export const menuItems: MenuItems[] = [
+export const menuItems: Array<MenuItems> = [
 	{
 		id: 1,
 		href: 'https://www.linkedin.com/in/nahuel-scheytt/',

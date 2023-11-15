@@ -1,5 +1,5 @@
 export type MouseEvents = {
-  isMouseHover?: boolean
-  onMouseOver?: () => void
-  onMouseLeave?: () => void
+	isMouseHover?: boolean
+	onMouseOver?: () => void
+	onMouseLeave?: () => void
 }
