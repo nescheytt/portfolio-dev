@@ -1,10 +1,10 @@
-type ListItems = {
+type MenuItems = {
 	id: number
-	href: string
 	label: string
+	href: string
 }
 
-export const listItems: ListItems[] = [
+export const menuItems: MenuItems[] = [
 	{
 		id: 1,
 		href: 'https://www.linkedin.com/in/nahuel-scheytt/',
@@ -17,11 +17,6 @@ export const listItems: ListItems[] = [
 	},
 	{
 		id: 3,
-		href: 'https://twitter.com/nahueesch',
-		label: 'Twitter'
-	},
-	{
-		id: 4,
 		href: 'mailto:nahuel.scheytt@gmail.com',
 		label: 'Email'
 	}
