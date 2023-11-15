@@ -1,10 +1,17 @@
 import type { Metadata } from 'next'
 
+const title = 'Nahuel Scheytt | Frontend Developer'
+const description = 'Nahuel Scheytt is a Frontend Developer yet capable to develop on backend.'
+
 export const configMetadata: Metadata = {
-	title: 'Nahuel Scheytt | Frontend Developer',
-	description: 'Nahuel Scheytt is a Frontend Developer yet capable to develop on backend.',
+	title,
+	description,
 	keywords: ['Nahuel', 'Scheytt', 'Frontend', 'Developer', 'React', 'JavaScript'],
-	authors: [{ name: 'Nahuel Scheytt' }],
+	authors: [
+		{
+			name: 'Nahuel Scheytt'
+		}
+	],
 	themeColor: '#ffd7ed',
 	colorScheme: 'light',
 	viewport: {
@@ -13,10 +20,10 @@ export const configMetadata: Metadata = {
 		maximumScale: 1
 	},
 	openGraph: {
-		title: 'Nahuel Scheytt | Frontend Developer',
-		description: 'Nahuel Scheytt is a Frontend Developer yet capable to develop on backend.',
+		title,
+		description,
 		url: 'https://www.nahuelscheytt.com',
-		siteName: 'Nahuel Scheytt | Frontend Developer',
+		siteName: title,
 		images: [
 			{
 				url: 'opengraph-image.jpg',
@@ -30,12 +37,12 @@ export const configMetadata: Metadata = {
 	},
 	twitter: {
 		card: 'summary_large_image',
-		title: 'Nahuel Scheytt | Frontend Developer',
-		description: 'Nahuel Scheytt is a Frontend Developer yet capable to develop on backend.',
+		title,
+		description,
 		creator: '@nahueesch',
 		images: {
 			url: 'opengraph-image.jpg',
-			alt: 'Nahuel Scheytt | Frontend Developer Logo'
+			alt: 'Nahuel Scheytt - Frontend Developer Logo'
 		}
 	},
 	robots: {
@@ -53,7 +60,15 @@ export const configMetadata: Metadata = {
 		canonical: '/'
 	},
 	icons: {
-		shortcut: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
-		apple: { url: '/apple-touch-icon.png', type: 'image/png' }
+		shortcut: [
+			{
+				url: '/favicon.svg',
+				type: 'image/svg+xml'
+			}
+		],
+		apple: {
+			url: '/apple-touch-icon.png',
+			type: 'image/png'
+		}
 	}
 }
