@@ -20,13 +20,6 @@ export const configMetadata: Metadata = {
       name: "Nahuel Scheytt",
     },
   ],
-  themeColor: "#ffd7ed",
-  colorScheme: "light",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-  },
   openGraph: {
     title,
     description,
