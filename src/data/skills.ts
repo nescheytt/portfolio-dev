@@ -1,6 +1,6 @@
-export const listLengauges = ['HTML', 'CSS', 'LESS/SASS', 'VanillaJS', 'TypeScript']
+export const listLengauges: Array<string> = ['HTML', 'CSS', 'LESS/SASS', 'VanillaJS', 'TypeScript']
 
-export const listFrameworksLibsOthers = [
+export const listFrameworksLibsOthers: Array<string> = [
 	'React.js',
 	'Next.js',
 	'JQuery',
@@ -21,38 +21,3 @@ export const listFrameworksLibsOthers = [
 	'Figma',
 	'Vercel'
 ]
-
-/**
- * Set settings Framer-Motion
- */
-export const settingsFramerMotion = {
-	// parent
-	container: {
-		hidden: {
-			x: '-100%',
-			opacity: 0
-		},
-		show: {
-			x: 0,
-			opacity: 1,
-			transition: {
-				delay: 0.5,
-				duration: 0.5,
-				delayChildren: 1,
-				staggerChildren: 0.2
-			}
-		}
-	},
-
-	// childrens
-	item: {
-		hidden: {
-			y: 0,
-			opacity: 0
-		},
-		show: {
-			y: '-100%',
-			opacity: 1
-		}
-	}
-}

@@ -11,7 +11,7 @@ type ListExperiences = {
 	}
 }
 
-export const listExperiences: ListExperiences[] = [
+export const listExperiences: Array<ListExperiences> = [
 	{
 		id: 1,
 		position: 'Frontend Developer React',

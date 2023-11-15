@@ -4,7 +4,7 @@ type ListItems = {
 	label: string
 }
 
-export const listItems: ListItems[] = [
+export const listItems: Array<ListItems> = [
 	{
 		id: 1,
 		href: 'https://www.linkedin.com/in/nahuel-scheytt/',
