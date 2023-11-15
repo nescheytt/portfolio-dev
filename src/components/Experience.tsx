@@ -1,6 +1,6 @@
-import { motion as m } from "framer-motion"
-import { useMouseEventsContext } from "@/context/mouseEvents"
-import { listExperiences } from "@/constants/experience"
+import { motion as m } from 'framer-motion'
+import { useMouseEventsContext } from '@/context/mouseEvents'
+import { listExperiences } from '@/data/experience'
 
 const Experience = () => {
   const mouseEvents = useMouseEventsContext()
@@ -23,7 +23,7 @@ const Experience = () => {
       <div className="grid grid-cols-1 items-end gap-20 sm:grid-cols-2 sm:gap-10">
         <div className="flex max-sm:order-1">
           <m.a
-            href="https://drive.google.com/file/d/1g1J3LO-C5CFq6snWIN8gtJV-PZb8IRpA/view?usp=drive_link"
+            href="https://docs.google.com/document/d/15bWp4qbqn_asJ42i1glIid6deNI_tWizC80scXREgh0/edit?usp=sharing"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 1, duration: 1 }}
@@ -50,17 +50,12 @@ const Experience = () => {
           </m.a>
         </div>
 
-        <m.ol
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.75, duration: 1 }}
-          className="relative space-y-10 border-l border-gray-200 dark:border-gray-700"
-        >
-          {listExperiences.map((experience, index) => {
+        <m.ol initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ delay: 0.75, duration: 1 }} className="relative border-l border-gray-200 dark:border-gray-700 space-y-10">
+          {listExperiences.map((experience) => {
             return (
-              <li key={index} className="ml-4 md:ml-6">
-                <div className="absolute -left-1.5 mt-1.5 h-3 w-3 rounded-full border border-white bg-gray-200 dark:border-gray-900 dark:bg-gray-700"></div>
-                <div className="mb-1 flex gap-x-1 lg:mb-0">
+              <li key={experience.id} className="ml-4 md:ml-6">
+                <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                <div className="flex mb-1 lg:mb-0 gap-x-1">
                   <h3 className="text-lg font-medium text-white">
                     {experience.position}{" "}
                     <span className="text-gray-500">at</span>

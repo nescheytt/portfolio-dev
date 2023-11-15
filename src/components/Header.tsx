@@ -1,7 +1,7 @@
-import Link from "next/link"
-import { motion as m } from "framer-motion"
-import { useMouseEventsContext } from "@/context/mouseEvents"
-import { menuItems } from "@/constants/header"
+import Link from 'next/link'
+import { motion as m } from 'framer-motion'
+import { useMouseEventsContext } from '@/context/mouseEvents'
+import { menuItems } from '@/data/header'
 
 const Header = () => {
   const mouseEvents = useMouseEventsContext()

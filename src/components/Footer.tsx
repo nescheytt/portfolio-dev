@@ -1,6 +1,6 @@
-import Link from "next/link"
-import { useMouseEventsContext } from "@/context/mouseEvents"
-import { listItems } from "@/constants/footer"
+import Link from 'next/link'
+import { useMouseEventsContext } from '@/context/mouseEvents'
+import { listItems } from '@/data/footer'
 
 const Footer = () => {
   const mouseEvents = useMouseEventsContext()

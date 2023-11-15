@@ -1,17 +1,17 @@
-import { useState } from "react"
+import { useState } from 'react'
 
 const useMouseEvents = () => {
-  const [isMouseHover, setIsMouseHover] = useState(false)
+	const [isMouseHover, setIsMouseHover] = useState(false)
 
-  const handleMouse = (isHovering: boolean) => {
-    setIsMouseHover(isHovering)
-  }
+	const handleMouse = (isHovering: boolean) => {
+		setIsMouseHover(isHovering)
+	}
 
-  return {
-    isMouseHover,
-    onMouseOver: () => handleMouse(true),
-    onMouseLeave: () => handleMouse(false),
-  }
+	return {
+		isMouseHover,
+		onMouseOver: () => handleMouse(true),
+		onMouseLeave: () => handleMouse(false)
+	}
 }
 
 export default useMouseEvents
