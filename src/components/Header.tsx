@@ -1,5 +1,7 @@
+import Link from 'next/link'
 import { motion as m } from 'framer-motion'
 import { useMouseEventsContext } from '@/context/mouseEvents'
+import { menuItems } from '@/constants/header'
 
 const Header = () => {
   const mouseEvents = useMouseEventsContext()
@@ -10,16 +12,17 @@ const Header = () => {
         <a href="/" className="text-white text-sm md:text-xl">Nahuel Scheytt</a>
       </m.div>
 
-      <m.ul animate={{ opacity: 1 }} initial={{ opacity: 0 }} transition={{ delay: 2.50, duration: 1 }} className="flex gap-x-4">
-        <li onMouseOver={mouseEvents.onMouseOver} onMouseLeave={mouseEvents.onMouseLeave}>
-          <a href="https://www.linkedin.com/in/nahuel-scheytt" className="text-sm md:text-xl text-gray-300 hover:underline" target="_blank">LinkedIn</a>
-        </li>
-        <li onMouseOver={mouseEvents.onMouseOver} onMouseLeave={mouseEvents.onMouseLeave}>
-          <a href="mailto:nahuel.scheytt@gmail.com" className="text-sm md:text-xl text-gray-300 hover:underline">Email</a>
-        </li>
-      </m.ul>
+      <nav>
+        <m.ol animate={{ opacity: 1 }} initial={{ opacity: 0 }} transition={{ delay: 2.50, duration: 1 }} className="flex gap-x-4">
+          {menuItems.map((item) => (
+            <li key={item.id} onMouseOver={mouseEvents.onMouseOver} onMouseLeave={mouseEvents.onMouseLeave}>
+              <Link href={item.href} className="text-sm md:text-xl text-gray-300 hover:underline" target="_blank">{item.label}</Link>
+            </li>
+          ))}
+        </m.ol>
+      </nav>
     </header>
-  )  
+  )
 }
 
 export default Header
