@@ -65,14 +65,14 @@ const Contact = () => {
   }
 
   return (
-    <section className="w-full flex flex-col justify-between items-end py-24 px-8 md:pt-12 md:px-12 lg:px-24 md:pb-6">
-      <div className="max-w-3xl flex flex-col gap-y-20">
+    <section className="flex w-full flex-col items-end justify-between px-8 py-24 md:px-12 md:pb-6 md:pt-12 lg:px-24">
+      <div className="flex max-w-3xl flex-col gap-y-20">
         <div className="w-full">
-          <p className="text-gray-800 text-base font-medium uppercase">Have a project in mind?</p>
-          <p className="text-gray-800 text-5xl md:text-6xl lg:text-7xl font-semibold mb-4" onMouseOver={mouseEvents.onMouseOver} onMouseLeave={mouseEvents.onMouseLeave}>
+          <p className="text-base font-medium uppercase text-gray-800">Have a project in mind?</p>
+          <p className="mb-4 text-5xl font-semibold text-gray-800 md:text-6xl lg:text-7xl" onMouseOver={mouseEvents.onMouseOver} onMouseLeave={mouseEvents.onMouseLeave}>
             {`Let's talk`}<span className="text-4xl">↓</span>.
           </p>
-          <p className="text-gray-500 text-base font-normal">
+          <p className="text-base font-normal text-gray-500">
             {`I am currently interested in a "Full-time Front-end developer role (remote)" with specialization in "React.js", but still open to other opportunities. 
               However, if you have other requests or questions, feel free to use the form.`}
           </p>
@@ -81,35 +81,35 @@ const Contact = () => {
         <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={handleSubmit}>
           {({ errors, handleBlur, handleChange, isSubmitting, values, touched }) => (
             <Form>
-              <div className="w-full flex flex-col gap-y-10">
-                <div className="w-full flex flex-col md:flex-row gap-10 md:gap-20">
-                  <div className="w-full relative z-0">
+              <div className="flex w-full flex-col gap-y-10">
+                <div className="flex w-full flex-col gap-10 md:flex-row md:gap-20">
+                  <div className="relative z-0 w-full">
                     <Field
                       type="text"
                       id="name"
                       name="name"
-                      className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-gray-700 peer"
+                      className="peer block w-full appearance-none border-0 border-b border-gray-300 bg-transparent px-0 py-2.5 text-sm text-gray-900 focus:border-gray-700 focus:outline-none focus:ring-0"
                       placeholder=" "
                       value={values.name}
                       onChange={handleChange}
                       onBlur={handleBlur}
                     />
-                    <label htmlFor="name" className="absolute text-base text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Name</label>
-                    {errors.name && touched.name && <span className="text-xs text-red-500 absolute">{errors.name}</span>}
+                    <label htmlFor="name" className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 text-base text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 dark:text-gray-400">Name</label>
+                    {errors.name && touched.name && <span className="absolute text-xs text-red-500">{errors.name}</span>}
                   </div>
-                  <div className="w-full relative z-0">
+                  <div className="relative z-0 w-full">
                     <Field
                       type="email"
                       id="email"
                       name="email"
-                      className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-gray-700 peer"
+                      className="peer block w-full appearance-none border-0 border-b border-gray-300 bg-transparent px-0 py-2.5 text-sm text-gray-900 focus:border-gray-700 focus:outline-none focus:ring-0"
                       placeholder=" "
                       value={values.email}
                       onChange={handleChange}
                       onBlur={handleBlur}
                     />
-                    <label htmlFor="email" className="absolute text-base text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email</label>
-                    {errors.email && touched.email && <span className="text-xs text-red-500 absolute">{errors.email}</span>}
+                    <label htmlFor="email" className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 text-base text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 dark:text-gray-400">Email</label>
+                    {errors.email && touched.email && <span className="absolute text-xs text-red-500">{errors.email}</span>}
                   </div>
                 </div>
 
@@ -118,40 +118,40 @@ const Contact = () => {
                     type="text"
                     id="subject"
                     name="subject"
-                    className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-gray-700 peer"
+                    className="peer block w-full appearance-none border-0 border-b border-gray-300 bg-transparent px-0 py-2.5 text-sm text-gray-900 focus:border-gray-700 focus:outline-none focus:ring-0"
                     placeholder=" "
                     value={values.subject}
                     onChange={handleChange}
                     onBlur={handleBlur}
                   />
-                  <label htmlFor="subject" className="absolute text-base text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Subject</label>
-                  {errors.subject && touched.subject && <span className="text-xs text-red-500 absolute">{errors.subject}</span>}
+                  <label htmlFor="subject" className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 text-base text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 dark:text-gray-400">Subject</label>
+                  {errors.subject && touched.subject && <span className="absolute text-xs text-red-500">{errors.subject}</span>}
                 </div>
 
                 <div className="relative z-0">
                   <textarea
                     id="message"
                     name="message"
-                    className="block py-2.5 px-0 w-full min-h-[180px] text-sm text-gray-900 bg-transparent border-0 border-b border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-gray-700 peer"
+                    className="peer block min-h-[180px] w-full appearance-none border-0 border-b border-gray-300 bg-transparent px-0 py-2.5 text-sm text-gray-900 focus:border-gray-700 focus:outline-none focus:ring-0"
                     placeholder=" "
                     value={values.message}
                     onChange={handleChange}
                     onBlur={handleBlur}
                   />
-                  <label htmlFor="message" className="absolute text-base text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Message</label>
+                  <label htmlFor="message" className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 text-base text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 dark:text-gray-400">Message</label>
                   {errors.message && touched.message && <span className="text-xs text-red-500 first-letter:absolute">{errors.message}</span>}
                 </div>
 
                 <div>
                   <button
                     type="submit"
-                    className="text-gray-700 font-medium text-4xl text-center inline-flex items-center disabled:animate-pulse disabled:text-gray-500 disabled:cursor-not-allowed"
+                    className="inline-flex items-center text-center text-4xl font-medium text-gray-700 disabled:animate-pulse disabled:cursor-not-allowed disabled:text-gray-500"
                     onMouseOver={mouseEvents.onMouseOver}
                     onMouseLeave={mouseEvents.onMouseLeave}
                     disabled={isSubmitting}
                   >
-                    <span className="font-semibold mr-6">Send</span>
-                    <svg className="w-10 h-10" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <span className="mr-6 font-semibold">Send</span>
+                    <svg className="h-10 w-10" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         fillRule="evenodd"
                         clipRule="evenodd"

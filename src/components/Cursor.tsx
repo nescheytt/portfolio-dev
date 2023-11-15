@@ -7,10 +7,10 @@ const Cursor = () => {
 
   return (
     <div
-      className={`${mouseEvents.isMouseHover && "scale-5"} hidden w-4 h-4 bg-white rounded-full lg:flex fixed pointer-events-none mix-blend-difference z-10 transition ease-out duration-300 origin-center -translate-x-1/2 -translate-y-1/2`}
+      className={`${mouseEvents.isMouseHover && "scale-[5]"} pointer-events-none fixed z-10 hidden h-4 w-4 origin-center -translate-x-1/2 -translate-y-1/2 rounded-full bg-white mix-blend-difference transition duration-300 ease-out lg:flex`}
       style={{ top: coors.y + 'px', left: coors.x + 'px' }}
     />
   )
-} 
+}
 
 export default Cursor

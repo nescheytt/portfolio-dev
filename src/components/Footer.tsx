@@ -6,8 +6,8 @@ const Footer = () => {
   const mouseEvents = useMouseEventsContext()
 
   return (
-    <footer className="w-full flex flex-col md:flex-row justify-between items-center border-t border-gray-300 py-8 px-8 md:px-12 md:pt-6 gap-y-10 md:gap-y-0">
-      <ol className="w-full flex justify-center md:justify-start gap-x-4">
+    <footer className="flex w-full flex-col items-center justify-between gap-y-10 border-t border-gray-300 p-8 md:flex-row md:gap-y-0 md:px-12 md:pt-6">
+      <ol className="flex w-full justify-center gap-x-4 md:justify-start">
         {listItems.map((item, index) => (
           <li key={index} onMouseOver={mouseEvents.onMouseOver} onMouseLeave={mouseEvents.onMouseLeave}>
             <Link href={item.href} className="text-gray-800 hover:underline" target="_blank">{item.label}</Link>
@@ -15,7 +15,7 @@ const Footer = () => {
         ))}
       </ol>
 
-      <p className="text-gray-800 whitespace-nowrap">© 2023 Nahuel Scheytt</p>
+      <p className="whitespace-nowrap text-gray-800">© 2023 Nahuel Scheytt</p>
     </footer>
   )
 }
